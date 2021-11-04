@@ -61,6 +61,7 @@ The APIs are secured using Token Authentication, to access the API's, user has t
       app_1     | Quit the server with CONTROL-C.
 5. Celery is configured to write the exchage rate data to DB every hour.
 6. DB data sample data:
+
       1 "62424.86000000"	"2021-11-04 06:21:02"
       2	"62443.02000000"	"2021-11-04 06:22:00"
       3	"62469.17000000"	"2021-11-04 06:23:00"
