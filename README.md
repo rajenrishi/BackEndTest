@@ -34,12 +34,19 @@ The APIs are secured using Token Authentication, to access the API's, user has t
     Docker Compose Up logs:
     
       celery_1  |                 
+      
       celery_1  | 
+      
       celery_1  | [tasks]
+      
       celery_1  |   . write_btc_usd_quote
+      
       celery_1  | 
+      
       celery_1  | [2021-11-04 07:44:20,339: INFO/MainProcess] Connected to redis://redis:6379//
+      
       celery_1  | [2021-11-04 07:44:20,468: INFO/MainProcess] mingle: searching for neighbors
+      
       app_1     | Operations to perform:
       app_1     |   Apply all migrations: admin, auth, authtoken, contenttypes, quotesapp, sessions
       app_1     | Running migrations:
@@ -63,11 +70,17 @@ The APIs are secured using Token Authentication, to access the API's, user has t
 6. DB data sample data:
 
       1 "62424.86000000"	"2021-11-04 06:21:02"
+      
       2	"62443.02000000"	"2021-11-04 06:22:00"
+      
       3	"62469.17000000"	"2021-11-04 06:23:00"
+      
       4	"62486.34000000"	"2021-11-04 06:24:01"
+      
       5	"62494.05000000"	"2021-11-04 06:25:00"
+      
       6	"62525.75000000"	"2021-11-04 06:26:01"
+      
 
 
 # Using the API's
