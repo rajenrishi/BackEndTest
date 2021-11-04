@@ -21,7 +21,7 @@ The APIs are secured using Token Authentication, to access the API's, user has t
 **STEPS TO GENERATE TOKEN:**
 1. Using httpie package: http POST http://127.0.0.1:8000/get_token/ username="suser" password="suser"
 2. Once the token is generated use the same to access the API's.
-3. Sample response: {"token": "97eb4bfecef80a1c3747cfbb3507127263bab7fc"}
+3. Sample response: {"token": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB"}
 
 **Note: Postman also can be used for the same.**
 
