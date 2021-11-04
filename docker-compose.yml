@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+
+  redis:
+    image: "redis:alpine"
+
+  db:
+    image: postgres:10-alpine
+    environment:
+      - POSTGRES_DB=app
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./data/db:/var/lib/postresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/django
+    command: >
+      sh -c "python3 manage.py makemigrations &&
+             python3 manage.py migrate &&
+             python3 manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - db  
+
+  celery:
+    restart: always
+    build: .
+    command: celery -A core worker -B -l INFO
+    volumes:
+      - .:/django
+    depends_on:
+      - db
+      - redis
+      - app

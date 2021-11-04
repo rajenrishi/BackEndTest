@@ -1,0 +1,8 @@
+Django>=2.2
+django-environ
+djangorestframework
+djangorestframework-api-key
+Celery==4.4.1
+redis==3.4.1
+psycopg2>=2.7.5
+requests
