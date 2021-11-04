@@ -32,6 +32,7 @@ The APIs are secured using Token Authentication, to access the API's, user has t
 3. Once the build is successful, run "sudo docker-compose up" command.
 4. Please check if all the services are up: app, celery, db, redis
     Docker Compose Up logs:
+    
       celery_1  |                 
       celery_1  | 
       celery_1  | [tasks]
